@@ -1,0 +1,28 @@
+<div class="youtube-preview-component-container">
+        <div class="youtube-header">
+            <div class="youtube-title" rv-on-click="goToYoutubeArticle">
+                {title} 
+            </div>
+            <div class="youtube-options">
+                <div class="option-button"><i class="fas fa-bookmark"></i></div>
+                <div class="option-button"><i class="fas fa-eye"></i></div>
+                <div class="option-button"><i class="fas fa-share"></i></div>
+            </div>
+        </div>
+        <div class="youtube-content">
+            <div class="youtube-thumbnail">
+                <img src="https://img-aws.ehowcdn.com/877x500p/s3-us-west-1.amazonaws.com/contentlab.studiod/getty/f24b4a7bf9f24d1ba5f899339e6949f3">
+            </div>
+
+            <div class="youtube-details">
+                <div class="youtube-preview">
+                    {description}    
+                </div>
+        
+                <div class="youtube-tags">
+                    <button class="tag" rv-each-tag="tags">{tag}</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>

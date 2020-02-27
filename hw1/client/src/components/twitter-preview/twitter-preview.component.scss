@@ -1,0 +1,98 @@
+.twitter-preview-component-container{
+    padding: 20px 50px;
+}
+
+.twitter-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px;
+    background: #1AB7EA;
+}
+
+.twitter-title{
+    font-size: 20px;
+    font-weight: bold;      
+    color: #646464; 
+    cursor: pointer;
+}
+
+.twitter-title:hover{
+    color: white;
+}
+
+.twitter-content{
+    background: white;
+    padding: 40px 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.twitter-thumbnail {
+    img {
+        width: 300px;
+    }
+}
+
+.twitter-tags{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.tag{
+    background: #ededed;
+    color: #999;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: all 0.4s;
+    margin: 8px;
+}
+
+.tag:hover{
+    background: #00d793;
+    color: white;
+}
+
+.twitter-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.twitter-preview {
+    margin-left: 20px;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+.twitter-options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.option-button{
+    margin-right: 10px;
+    font-size: 20px;
+    color: #646464;
+    
+}
+
+.option-button:hover i{
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 599px) {
+    .twitter-preview-component-container{
+        padding: 0;
+    }
+
+}

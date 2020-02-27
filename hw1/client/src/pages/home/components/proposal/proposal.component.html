@@ -1,0 +1,59 @@
+<div class="proposal-container">
+    <div class="proposal-left-container">
+        <div class="your-proposal-title">
+            Your proposal
+        </div>
+        <div class="proposal">
+            <div class="proposal-text">
+                    Resource
+            </div>
+            <select rv-value="proposalForm.resource">
+                <option>Media</option>
+                <option>Code</option>
+                <option>Document</option>
+            </select>
+        </div>
+        <div class="proposal">
+            <div class="proposal-text">
+                Title
+            </div>
+            <input rv-value="proposalForm.title"/>
+        </div>
+
+        <div class="proposal">
+            <div class="proposal-text">
+                Description
+            </div>
+            <textarea rv-value="proposalForm.description"></textarea>
+        </div>
+
+        <div class="proposal">
+            <div class="proposal-text">
+                Link
+            </div>
+            <input rv-value="proposalForm.link"/>
+        </div>
+
+        <div class="proposal">
+            <div class="proposal-text">
+                Provider
+            </div>
+            <select rv-value="proposalForm.provider">
+                <option>Youtube</option>
+                <option>Vimeo</option>
+                <option>Git</option>
+                <option>Wikipedia</option>
+                <option>Others</option>
+            </select>
+        </div>
+        
+        <div class="proposal">
+            <button class="tag" rv-on-click="submit">Submit</button>
+        </div>
+
+    </div>       
+    
+    <div class="proposal-right-container">
+        <i class="fa fa-folder-plus"></i>
+    </div>
+</div>

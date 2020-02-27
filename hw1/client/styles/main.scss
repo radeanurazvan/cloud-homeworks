@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
+
+@import 'home/home.page';
+@import 'login/pages/login.page';
+@import 'article/article.page';
+
+@import 'sidebar/sidebar.component';
+@import 'filter-bar/filter-bar.component';
+@import 'article-preview/article-preview.component';
+@import 'not-found/not-found.component';
+@import 'youtube-preview/youtube-preview.component';
+@import 'vimeo-preview/vimeo-preview.component';
+@import 'twitter-preview/twitter-preview.component';
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, ul, ol, li {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mobile-visible {
+    display: none;
+}
+
+.tablet-visible {
+    display: none;
+}
+
+.master-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* MOBILE  */
+
+@media only screen and (max-width: 599px) {
+    .mobile-hidden {
+        display: none !important;
+    }
+
+.mobile-visible {
+        display: block;
+    }
+}
+
+/* TABLET  */
+
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+    .tablet-hidden {
+        display: none !important;
+    }
+
+    .tablet-visible {
+        display: block;
+    }
+}

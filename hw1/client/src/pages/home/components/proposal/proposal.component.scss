@@ -1,0 +1,87 @@
+.your-proposal-title {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 50px;
+    color: #646464;
+}
+
+.proposal {
+    color: #646464;
+    font-size: 25px;
+    margin: 15px 50px;
+}
+
+.proposal-container {
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+
+    .proposal-left-container {
+        width: 50%;
+    }
+
+    .proposal-right-container {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .fa-folder-plus {
+            font-size: 300px;
+            color: #646464;
+        }
+    }
+
+    input {
+        width: 75%;
+        padding: 10px;
+        border: 2px solid #d8d8d8;
+        font-weight: 500;
+    }
+
+    textarea {
+        width: 75%;
+        height: 70px;
+        padding: 10px;
+        border: 2px solid #d8d8d8;
+        font-weight: 500;
+    }
+
+    select {
+        width: 75%;
+        padding: 10px;
+        border: 2px solid #d8d8d8;
+        font-weight: 500;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .proposal-right-container {
+        display: none !important;
+    }
+
+    .proposal-left-container {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .proposal-left-container {
+        .your-proposal-title {
+            font-size: 20px;
+            margin: 20px;
+        }
+
+        .proposal {
+            font-size: 10px;
+            margin: 5px 20px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+        }
+    }
+}

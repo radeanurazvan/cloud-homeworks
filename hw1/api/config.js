@@ -1,7 +1,7 @@
 const youtubeConfig = {
     part: 'snippet',
     type: 'video',
-    maxResults: 5,
+    maxResults: 2,
     apiKey:'AIzaSyCafzAR0XTWF20mouu-EobOrrwPVh8BCwk'
 };
 
@@ -21,7 +21,8 @@ module.exports = {
     vimeo: {
         key: '3434035c7a4592543bf9a48fdcc2dd09',
         urls: {
-            search: 'https://api.vimeo.com/videos?page=1&per_page=5'
+            search: 'https://api.vimeo.com/videos?page=1&per_page=2'
         }
-    }
+    },
+    selfSearch: 'http://localhost:3000/api/search' 
 };

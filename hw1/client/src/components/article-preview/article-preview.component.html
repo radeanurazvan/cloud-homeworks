@@ -1,0 +1,31 @@
+<div class="article-preview-component-container">
+    <div class="article-header">
+        <div class="article-title" rv-on-click="goToArticle">
+            {title} 
+        </div>
+        <div class="article-options">
+            <div class="option-button"><i class="fas fa-bookmark"></i></div>
+            <div class="option-button"><i class="fas fa-eye"></i></div>
+            <div class="option-button"><i class="fas fa-share"></i></div>
+        </div>
+    </div>
+    <div class="article-content">
+        <div class="preview mobile-hidden tablet-hidden">
+        {content}    
+        </div>
+
+        <!-- see how to properly do that -->
+        <div class="preview mobile-visible">
+            PHP has become one of the workhorses of the internet due to its power and flexibility. In this article, Dr. Michael Garbade introduces us to and reviews three PHP frameworks: Symfony, Laravel...        
+        </div>
+
+        <!-- see how to properly do that -->
+        <div class="preview tablet-visible">
+            PHP has become one of the workhorses of the internet due to its power and flexibility. In this article, Dr. Michael Garbade introduces us to and reviews three PHP frameworks: Symfony, Laravel...        
+        </div>
+
+        <div class="article-tags">
+            <button class="tag" rv-each-tag="tags">{tag}</button>
+        </div>
+    </div>
+</div>

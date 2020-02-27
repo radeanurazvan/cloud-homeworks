@@ -1,0 +1,45 @@
+{
+  "name": "webpack2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.ts",
+  "scripts": {
+    "transpile": "npx webpack --config webpack.config.js --env=dev",
+    "transpile:watch": "npx webpack --config webpack.config.js --env=dev --watch",
+    "transpile:prod": "npx webpack --config webpack.config.js --env=prod"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/toastr": "^2.1.37",
+    "awesome-typescript-loader": "^5.2.1",
+    "codelyzer": "^5.0.1",
+    "css-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-loader": "^0.5.5",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.4.4",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-livereload-plugin": "^2.2.0"
+  },
+  "dependencies": {
+    "@types/navigo": "^7.0.1",
+    "@types/node": "^11.13.8",
+    "axios": "^0.19.0",
+    "express": "^4.16.4",
+    "html-webpack-plugin": "^3.2.0",
+    "inversify": "^5.0.1",
+    "jwt-simple": "^0.5.6",
+    "navigo": "^7.1.2",
+    "nodemon": "^1.19.1",
+    "reflect-metadata": "^0.1.13",
+    "rivets": "^0.9.6",
+    "rxjs": "^6.5.1",
+    "toastr": "^2.1.4",
+    "tslint": "^5.16.0"
+  }
+}

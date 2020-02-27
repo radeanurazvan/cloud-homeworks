@@ -1,0 +1,45 @@
+<div class="sidebar mobile-hidden">
+    <header class="logo">
+        <h1>TReX</h1>
+    </header>
+
+    <div class="sidebar-container">
+        <div class="user-info">
+            <div class="initials-container">
+                <div class="initials">
+                    {user.initials}
+                </div>
+            </div>
+
+            <div class="about-user">
+                <div class="name">
+                    {user.name}
+                </div>
+                <div class="occupation">
+                    {user.occupation}
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li rv-class-selected="isDiscoverActive" rv-on-click="selected">
+                    <i class="fa fa-fire"></i>
+                    Discover
+                </li>
+                <li rv-class-selected="isHistoryActive" rv-on-click="selected">
+                    <i class="fa fa-book-open"></i>
+                    History
+                </li>
+                <li rv-class-selected="isSavedActive" rv-on-click="selected">
+                    <i class="fa fa-bookmark"></i>
+                    Saved
+                </li>
+                <li rv-class-selected="isProposalsActive" rv-on-click="selected">
+                    <i class="fa fa-question"></i>
+                    Proposals
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

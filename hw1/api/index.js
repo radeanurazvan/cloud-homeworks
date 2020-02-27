@@ -1,5 +1,7 @@
 const http = require('http');
 const SearchService = require('./services/search.service');
+const fetch = require('node-fetch');
+const config = require('./config');
 
 process.on('uncaughtException', function(err) {
     // handle the error safely
@@ -8,8 +10,22 @@ process.on('uncaughtException', function(err) {
     console.log(err);
 });
 
+const logs = [];
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
+    
+    const requestStart = new Date().getTime();
+
+    res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Request-Method', '*');
+	res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
+	res.setHeader('Access-Control-Allow-Headers', '*');
+	if ( req.method === 'OPTIONS' ) {
+		res.writeHead(200);
+		res.end();
+		return;
+	}
+
     if(req.method != 'GET') {
         res.statusCode = 400;
         res.end();
@@ -24,7 +40,14 @@ const server = http.createServer((req, res) => {
         return;
     }
 
-    routes[route](req, res);
+    const response = await routes[route](req, res);
+    const requestEnd = new Date().getTime();
+    const duration = (requestEnd - requestStart) / 1000;
+    logs.push({
+        request: req.url,
+        latency: duration,
+        response: response
+    });
 });
 
 server.listen(3000, () => {
@@ -42,8 +65,32 @@ const routes = {
         }
 
         const songs = await new SearchService().search(searchParam);
-        res.end(JSON.stringify({songs}), null, 3);
+        const response = JSON.stringify({songs});
+        res.end(response);
+        return response;
     },
-    '/api/logs': () => {},
-    '/api/metrics': () => {},
+    '/api/metrics': (req, res) => {
+        const response = JSON.stringify({logs});
+        res.end(response);
+        return response;
+    },
+    '/api/spam': async (req, res) => {
+        const favoriteTerms = ['green day', 'blink182', 'slipknot', 'queen', 'baby shark'];
+        let spamSize = 500;
+        const batchSize = 50;
+
+        while(spamSize > 0) {
+            const promises = Array(batchSize).fill(0).map(() => {
+                const randomTerm = favoriteTerms[Math.floor(Math.random() * favoriteTerms.length)];
+                const query = encodeURI(`?q=${randomTerm}`);
+                return fetch(config.selfSearch + query);
+            });
+            await Promise.all(promises);
+
+            spamSize -= batchSize;
+        }
+
+        const mean = logs.map(l => l.latency).reduce((accumulated, current) => accumulated + current, 0) / logs.length;
+        res.end(JSON.stringify({mean}));
+    }
 };

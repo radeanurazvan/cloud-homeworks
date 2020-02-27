@@ -1,0 +1,49 @@
+<div class="home-container">
+
+    <div class="home-left-container">
+        <trex-sidebar channel="sidebarChannel"></trex-sidebar>
+    </div>
+
+    <div class="home-right-container">
+        <div class="discover" rv-show="isDiscoverSelected">
+            <header>
+                <h1>Discover your favorite songs</h1>
+            </header>
+
+            <form action="" class="search" rv-on-submit="searchTopic">
+                <input rv-value="topic">
+                <button>Search</button>
+            </form>
+
+            <div class="found-resources">
+                <trex-resource-preview rv-each-resource="searchedResources" resource="resource"></trex-resource-preview>
+            </div>
+
+            <footer>
+                <button class="tag" rv-on-click="discoverMore">Discover more</button>
+            </footer>
+            
+        </div>
+
+        <div class="history" rv-show="isHistorySelected">history</div>
+
+        <div class="saved" rv-show="isSavedSelected">saved</div>
+
+        <div class="proposals" rv-show="isProposalsSelected">
+            <div class="empty-header"></div>
+            <trex-proposal channel="proposalChannel"></trex-proposal>
+        </div>
+
+        <!-- <div rv-hide="proposalsTabSelected">
+            <trex-filter-bar channel="filterbarChannel"></trex-filter-bar>
+            <div class="article-preview-container">
+                <trex-resource-preview rv-each-article="updatedArticles" resource="article"></trex-resource-preview>
+                <trex-youtube-preview rv-each-youtube="youtubeArticles" youtube="youtube"></trex-youtube-preview>
+                <trex-vimeo-preview rv-each-vimeo="vimeoArticles" vimeo="vimeo"></trex-vimeo-preview>
+                <trex-twitter-preview rv-each-twitter="twitterArticles" twitter="twitter"></trex-twitter-preview>
+                <trex-not-found rv-if="notFound"></trex-not-found>
+            </div>
+        </div> -->
+    </div>
+    
+</div>

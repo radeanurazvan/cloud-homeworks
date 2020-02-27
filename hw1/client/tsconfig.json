@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "target": "es6",
+        "module": "commonjs",
+        "outDir": "dist",
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "paths": {
+            "@components": ["./src/components"],
+            "@pages": ["./src/pages"],
+            "@framework": ["./src/framework"],
+            "@framework/*": ["./src/framework/*"],
+            "@ioc": ["./src/ioc"],
+            "@constants": ["./src/constants"]
+        }
+    },
+    "include": [
+        "src/**/*.ts",
+        "main.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}

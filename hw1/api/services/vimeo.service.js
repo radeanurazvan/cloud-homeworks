@@ -21,6 +21,6 @@ module.exports = class VimeoService {
             }
         });
         const payload = await response.json();
-        return payload['data'];
+        return payload['data'] || [];
     }
 };

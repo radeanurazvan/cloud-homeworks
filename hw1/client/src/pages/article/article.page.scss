@@ -1,0 +1,121 @@
+.article-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.article-component-right-part {
+    width: 100%;
+    height: 100vh;
+    background-color: #f9f9f9;;
+    overflow-y: auto;
+}
+
+.article-component-container{
+    padding: 20px 50px;
+}
+
+.article-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px;
+    background: #f0f0f0;
+}
+
+.article-title{
+    font-size: 20px;
+    font-weight: bold;      
+    color: #646464; 
+    cursor: pointer;
+}
+
+.article-title:hover{
+    color: #00d793;
+}
+
+.article-content{
+    background: white;
+    padding: 40px 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.article-options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.option-button{
+    margin-right: 10px;
+    font-size: 20px;
+    color: #646464;
+    
+}
+
+.option-button:hover i{
+    color: #00d793;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.feedback-container {
+    padding: 40px 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.feedback-textarea {
+    width: 100%;
+    height: 75px;
+    margin-bottom: 20px;
+}
+
+.feedback-title {
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px;
+    background: #f0f0f0;
+}
+
+.feedback-form {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.feedback-area {
+    margin-bottom: 20px;
+    min-height: 100px;
+    width: 100%;
+}
+
+.feedback-submit-button{
+    background: #ededed;
+    color: #999;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: all 0.4s;
+    margin: 8px;
+}
+
+.feedback-submit-button:hover{
+    background: #00d793;
+    color: white;
+}
+
+@media only screen and (max-width: 599px) {
+    .article-component-container {
+        padding: 0;
+    }
+}

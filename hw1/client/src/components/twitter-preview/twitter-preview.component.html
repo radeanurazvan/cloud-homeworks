@@ -1,0 +1,21 @@
+<div class="twitter-preview-component-container">
+        <div class="twitter-header">
+            <div class="twitter-title" rv-on-click="goTotwitterArticle">
+                {title} 
+            </div>
+            <div class="twitter-options">
+                <div class="option-button"><i class="fas fa-bookmark"></i></div>
+                <div class="option-button"><i class="fas fa-eye"></i></div>
+                <div class="option-button"><i class="fas fa-share"></i></div>
+            </div>
+        </div>
+        <div class="twitter-content">
+            <div class="twitter-preview">
+                {description}    
+            </div>
+    
+            <div class="twitter-tags">
+                <button class="tag" rv-each-tag="tags">{tag}</button>
+            </div>
+        </div>
+    </div>

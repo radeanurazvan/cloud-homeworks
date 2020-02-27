@@ -17,6 +17,6 @@ module.exports = class YoutubeService {
         
         const response = await fetch(config.urls.search + query);
         const payload = await response.json();
-        return payload['items'];
+        return payload['items'] || [];
     }
 };
