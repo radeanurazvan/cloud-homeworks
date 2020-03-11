@@ -1,0 +1,37 @@
+<div class="page-container">
+
+    <div class="page-left-container">
+        <trex-sidebar selected="'orders'"></trex-sidebar>
+    </div>
+
+    <div class="page-right-container">
+        <trex-filter-bar></trex-filter-bar>
+
+        <div class="page-content">
+            <header class="customers-header">
+                <h2>Orders</h2>
+                <button class="btn btn-success" rv-on-click="create">Create</button>
+            </header>
+
+            <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Customer</th>
+                    <th scope="col">Placed at</th>
+                    <th scope="col">Batteries</th>
+                    <th scope="col">Accumulators</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr rv-each-order="orders">
+                    <td>{order.customer}</td>
+                    <td>{order.placedAt}</td>
+                    <td>{order.batteries}</td>
+                    <td>{order.accumulators}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    
+</div>

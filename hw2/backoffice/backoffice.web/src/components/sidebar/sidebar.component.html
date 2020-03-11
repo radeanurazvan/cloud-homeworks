@@ -1,0 +1,64 @@
+<div class="sidebar mobile-hidden">
+    <header class="logo">
+        <h1>EleCtriK</h1>
+    </header>
+
+    <div class="sidebar-container">
+        <div class="user-info">
+            <div class="initials-container">
+                <div class="initials">
+                    A
+                </div>
+            </div>
+
+            <div class="about-user">
+                <div class="name">
+                    Admin
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li data-value="batteries" rv-class-selected="menu.batteries" rv-on-click="selected">
+                    <i class="fa fa-battery-full"></i>
+                    Batteries
+                </li>
+                <li data-route="/batteries/catalog" rv-show="menu.batteries" rv-class-selected="menu.batteries" rv-on-click="selected">
+                    Catalog
+                </li>
+                <li data-route="/batteries/definitions" rv-show="menu.batteries" rv-class-selected="menu.batteries" rv-on-click="selected">
+                    Definitions
+                </li>
+                <li data-value="accumulators" rv-class-selected="menu.accumulators" rv-on-click="selected">
+                    <i class="fa fa-car-battery"></i>
+                    Accumulators
+                </li>
+                <li data-route="/accumulators/catalog" rv-show="menu.accumulators" rv-class-selected="menu.accumulators" rv-on-click="selected">
+                    Catalog
+                </li>
+                <li data-route="/accumulators/definitions" rv-show="menu.accumulators" rv-class-selected="menu.accumulators" rv-on-click="selected">
+                    Definitions
+                </li>
+                <li data-value="energy" rv-class-selected="menu.energy" rv-on-click="selected">
+                    <i class="fa fa-charging-station"></i>
+                    Energy 
+                </li>
+                <li data-route="/energy/catalog" rv-show="menu.energy" rv-class-selected="menu.energy" rv-on-click="selected">
+                    Catalog
+                </li>
+                <li data-route="/energy/definitions" rv-show="menu.energy" rv-class-selected="menu.energy" rv-on-click="selected">
+                    Definitions
+                </li>
+                <li data-value="customers" data-route="/customers" rv-class-selected="menu.customers" rv-on-click="selected">
+                    <i class="fa fa-users"></i>
+                    Customers
+                </li>
+                <li data-value="orders" data-route="/orders" rv-class-selected="menu.orders" rv-on-click="selected">
+                    <i class="fa fa-shopping-cart"></i>
+                    Orders
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

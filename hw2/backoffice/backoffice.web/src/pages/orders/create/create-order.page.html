@@ -1,0 +1,50 @@
+<div class="page-container">
+
+    <div class="page-left-container">
+        <trex-sidebar selected="'orders'"></trex-sidebar>
+    </div>
+
+    <div class="page-right-container">
+        <trex-filter-bar></trex-filter-bar>
+
+        <div class="page-content">
+            <header >
+                <h2>Create order</h2>
+            </header>
+
+            <h4>Select customer:</h4>
+            <select rv-value="customerId">
+                <option rv-each-customer="customers" rv-value="customer.id">{customer.name}</option>
+            </select>
+
+            <br>
+            <br>
+            <br>
+
+            <div rv-each-battery="orderBatteries">
+                <select rv-value="battery.id">
+                    <option rv-each-option="batteries" rv-value="option.id">{option.name}</option>
+                </select>    
+                <input placeholder="Battery quantity..." type="number" rv-value="battery.quantity">
+            </div>
+
+
+            <div rv-each-accumulator="orderAccumulators">
+                <select rv-value="accumulator.id">
+                    <option rv-each-option="accumulators" rv-value="option.id">{option.name}</option>
+                </select>    
+                <input type="number" placeholder="Accumulator quantity..." rv-value="accumulator.quantity">
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <button class="btn btn-info" rv-on-click="addBattery">Add battery</button>
+            <button class="btn btn-info" rv-on-click="addAccumulator">Add accumulator</button>
+            <button class="btn btn-success" rv-on-click="create">Create</button>
+
+        </div>
+    </div>
+    
+</div>

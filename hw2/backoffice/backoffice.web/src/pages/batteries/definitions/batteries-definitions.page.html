@@ -1,0 +1,35 @@
+<div class="batteries-definitions-container page-container">
+
+    <div class="page-left-container">
+        <trex-sidebar selected="'batteries'"></trex-sidebar>
+    </div>
+
+    <div class="page-right-container">
+        <trex-filter-bar></trex-filter-bar>
+
+        <div class="page-content">
+            <header><h2>Batteries Definitions</h2></header>
+
+            <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr rv-each-battery="batteries">
+                    <td>{battery.name}</td>
+                    <td>{battery.size}</td>
+                    <td>
+                      <button rv-on-click="battery.promote" class="btn btn-success">Promote</button>
+                      <button rv-on-click="battery.delete" class="btn btn-danger">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    
+</div>

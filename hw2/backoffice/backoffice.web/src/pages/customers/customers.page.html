@@ -1,0 +1,40 @@
+<div class="page-container">
+
+    <div class="page-left-container">
+        <trex-sidebar selected="'customers'"></trex-sidebar>
+    </div>
+
+    <div class="page-right-container">
+        <trex-filter-bar></trex-filter-bar>
+
+        <div class="page-content">
+            <header class="customers-header">
+                <h2>Customers</h2>
+                <button class="btn btn-success" rv-on-click="create">Create</button>
+            </header>
+
+            <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Is loyal</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr rv-each-customer="customers">
+                    <td>{customer.name}</td>
+                    <td>{customer.email}</td>
+                    <td>{customer.isLoyal}</td>
+                    <td>
+                      <button rv-on-click="customer.toggleLoyalty" class="btn btn-info">Toggle loyal</button>
+                      <button rv-on-click="customer.delete" class="btn btn-danger">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    
+</div>
