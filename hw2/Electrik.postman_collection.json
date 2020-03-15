@@ -1,0 +1,735 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Electrik",
+		"_postman_id": "c8674df0-7431-4e2c-414f-82c409a7a017",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Backoffice",
+			"description": "",
+			"item": [
+				{
+					"name": "Accumulators",
+					"description": "",
+					"item": [
+						{
+							"name": "Get definitions",
+							"request": {
+								"url": "http://localhost:5000/api/accumulators/definitions",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get catalog",
+							"request": {
+								"url": "http://localhost:5000/api/accumulators/catalog",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Change price",
+							"request": {
+								"url": {
+									"raw": "http://localhost:5000/api/accumulators/catalog/:id/price",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"accumulators",
+										"catalog",
+										":id",
+										"price"
+									],
+									"query": [],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"price\": 20\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Change stock",
+							"request": {
+								"url": {
+									"raw": "http://localhost:5000/api/accumulators/catalog/:id/stock",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"accumulators",
+										"catalog",
+										":id",
+										"stock"
+									],
+									"query": [],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"stock\": 100\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Promote definition",
+							"request": {
+								"url": {
+									"raw": "http://localhost:5000/api/accumulators/definitions/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"accumulators",
+										"definitions",
+										":id"
+									],
+									"query": [],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"price\": 10,\n\t\"stock\": 9\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Delete definition",
+							"request": {
+								"url": {
+									"raw": "http://localhost:5000/api/accumulators/definitions/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"accumulators",
+										"definitions",
+										":id"
+									],
+									"query": [],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Batteries",
+					"description": "",
+					"item": [
+						{
+							"name": "Get definitions",
+							"request": {
+								"url": "http://localhost:5000/api/batteries/definitions",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get catalog",
+							"request": {
+								"url": "http://localhost:5000/api/batteries/catalog",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Change price",
+							"request": {
+								"url": {
+									"raw": "http://localhost:5000/api/batteries/catalog/:id/price",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"batteries",
+										"catalog",
+										":id",
+										"price"
+									],
+									"query": [],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"price\": 20\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Change stock",
+							"request": {
+								"url": {
+									"raw": "http://localhost:5000/api/batteries/catalog/:id/stock",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"batteries",
+										"catalog",
+										":id",
+										"stock"
+									],
+									"query": [],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"stock\": 100\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Promote definition",
+							"request": {
+								"url": {
+									"raw": "http://localhost:5000/api/batteries/definitions/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"batteries",
+										"definitions",
+										":id"
+									],
+									"query": [],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"price\": 10,\n\t\"stock\": 9\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Delete definition",
+							"request": {
+								"url": {
+									"raw": "http://localhost:5000/api/batteries/definitions/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"batteries",
+										"definitions",
+										":id"
+									],
+									"query": [],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Energy providers",
+					"description": "",
+					"item": [
+						{
+							"name": "Get definitions",
+							"request": {
+								"url": "http://localhost:5000/api/energyProviders/definitions",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get catalog",
+							"request": {
+								"url": "http://localhost:5000/api/energyProviders/catalog",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Promote definition",
+							"request": {
+								"url": {
+									"raw": "http://localhost:5000/api/energyProviders/definitions/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"energyProviders",
+										"definitions",
+										":id"
+									],
+									"query": [],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"pricePerUnit\": 4.6\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Delete definition",
+							"request": {
+								"url": {
+									"raw": "http://localhost:5000/api/energyProviders/definitions/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"energyProviders",
+										"definitions",
+										":id"
+									],
+									"query": [],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Customers",
+					"description": "",
+					"item": [
+						{
+							"name": "Get all",
+							"request": {
+								"url": "http://localhost:5000/api/customers",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"url": "http://localhost:5000/api/customers",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"John\",\n\t\"email\": \"john.doe@gmail.com\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Toggle loyalty",
+							"request": {
+								"url": {
+									"raw": "http://localhost:5000/api/customers/:id/loyalty",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"customers",
+										":id",
+										"loyalty"
+									],
+									"query": [],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"url": {
+									"raw": "http://localhost:5000/api/customers/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"customers",
+										":id"
+									],
+									"query": [],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Orders",
+					"description": "",
+					"item": [
+						{
+							"name": "Get all",
+							"request": {
+								"url": "http://localhost:5000/api/orders",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"url": "http://localhost:5000/api/orders",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"customerId\": \"1\",\n\t\"batteries\": [\n\t\t{\n\t\t\t\"id\": \"1\",\n\t\t\t\"quantity\": \"1\"\n\t\t}\n\t],\n\t\"accumulators\": [\n\t\t{\n\t\t\t\"id\": \"1\",\n\t\t\t\"quantity\": \"1\"\n\t\t}\n\t]\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Providers",
+			"description": "",
+			"item": [
+				{
+					"name": "Create battery definition",
+					"request": {
+						"url": "http://localhost:4000/api/batteries",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Demo battery\",\n\t\"size\": 100\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create accumulator definition",
+					"request": {
+						"url": "http://localhost:4100/api/accumulators",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Bike Accumulator\",\n\t\"size\": 1200,\n\t\"category\": 2\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create enery provider definition",
+					"request": {
+						"url": "http://localhost:4300/api/energyProviders",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJHcmFkZS5pbyIsInN1YiI6ImE4MzkyY2RlLWIxNzQtNGI4Mi02OWY5LTA4ZDZkNTBhN2FhZSIsImp0aSI6IjdjYjE4ZWY4LWQzNzgtNGZlYS05MWM3LWMxOWFhZGRhY2QwMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InRlc3QzQHRlc3QuY29tIiwiRGlzcGxheU5hbWUiOiIiLCJVc2VyVHlwZSI6IlBlcnNpc3RlbnQiLCJuYmYiOjE1NTc0Njg0MjcsImV4cCI6MTU1NzU1NDgyNywiYXVkIjoiR3JhZGUuaW8ifQ.q3XLGmqzPf9zG83Fjz9PKKL0IxKR03OdAg99mhQdmUk",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"eRompetrol\",\n\t\"coordinates\": {\n\t\t\"longitude\": 50.8583701,\n\t\t\"latitude\": 10.2944813\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

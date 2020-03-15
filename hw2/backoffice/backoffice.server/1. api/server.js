@@ -39,7 +39,6 @@ const server = http.createServer(async (req, res) => {
     req.on('data', chunk => bodyChunks.push(chunk));
     req.on('end',() => {
         req.body = bodyChunks.length > 0 ? JSON.parse(bodyChunks) : {};
-        console.log(req.body);
         handleRequest(req, res);
     });
 });
