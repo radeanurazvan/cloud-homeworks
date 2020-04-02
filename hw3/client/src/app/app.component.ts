@@ -43,11 +43,11 @@ export class AppComponent implements OnInit {
         }, 100);
 
         timer(2000).subscribe(() => {
-            this.lights.turnOff();
+            // this.lights.turnOff();
             this.fridge.close();
             this.door.close();
             this.tv.close();
-            this.lightsOff = true;
+            // this.lightsOff = true;
         });
     }
 }

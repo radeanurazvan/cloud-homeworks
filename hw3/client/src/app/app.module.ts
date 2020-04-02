@@ -8,6 +8,7 @@ import { SwitchComponent } from './components/switch/switch.component';
 import { MicrowaveComponent } from './components/microwave/microwave.component';
 import { TvComponent } from './components/tv/tv.component';
 import { DoorComponent } from './components/door/door.component';
+import { RecorderComponent } from './components/recorder/recorder.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DoorComponent } from './components/door/door.component';
     SwitchComponent,
     MicrowaveComponent,
     TvComponent,
-    DoorComponent
+    DoorComponent,
+    RecorderComponent
   ],
   imports: [
     BrowserModule,
